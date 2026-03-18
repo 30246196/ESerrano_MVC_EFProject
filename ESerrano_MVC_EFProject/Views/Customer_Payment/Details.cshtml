@@ -1,0 +1,50 @@
+﻿@model ESerrano_MVC_EFProject.Models.Customer_Payment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer_Payment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.First_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.First_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ref_Payment_Methods.Payment_Method_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ref_Payment_Methods.Payment_Method_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ammount_Payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ammount_Payment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Other_Payment_Details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Other_Payment_Details)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

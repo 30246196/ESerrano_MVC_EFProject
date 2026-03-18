@@ -1,0 +1,81 @@
+﻿@model IEnumerable<ESerrano_MVC_EFProject.Models.Staff>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Address.Street_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nickname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Middle_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Last_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Of_Birth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Joined_Staff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Left_Staff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Other_Staff_Details)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address.Street_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nickname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.First_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Middle_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Last_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Of_Birth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Joined_Staff)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Left_Staff)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Other_Staff_Details)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StaffId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StaffId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StaffId })
+        </td>
+    </tr>
+}
+
+</table>

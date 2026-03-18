@@ -1,0 +1,75 @@
+﻿@model IEnumerable<ESerrano_MVC_EFProject.Models.Lesson>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.First_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ref_Lesson_Status.Lesson_Status_Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Staff.Nickname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vehicle.Vehicle_Details)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lesson_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lesson_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Other_Lesson_Details)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.First_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ref_Lesson_Status.Lesson_Status_Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Staff.Nickname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vehicle.Vehicle_Details)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lesson_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lesson_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Other_Lesson_Details)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LessonId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LessonId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LessonId })
+        </td>
+    </tr>
+}
+
+</table>

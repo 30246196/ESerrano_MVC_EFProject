@@ -127,7 +127,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\Customer_PaymentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LessonsController.cs" />
+    <Compile Include="Controllers\Ref_Customer_StatusController.cs" />
+    <Compile Include="Controllers\Ref_Lesson_StatusController.cs" />
+    <Compile Include="Controllers\Ref_Payment_MethodsController.cs" />
+    <Compile Include="Controllers\StaffsController.cs" />
+    <Compile Include="Controllers\VehiclesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -186,6 +194,46 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Staffs\Create.cshtml" />
+    <Content Include="Views\Staffs\Delete.cshtml" />
+    <Content Include="Views\Staffs\Details.cshtml" />
+    <Content Include="Views\Staffs\Edit.cshtml" />
+    <Content Include="Views\Staffs\Index.cshtml" />
+    <Content Include="Views\Ref_Customer_Status\Create.cshtml" />
+    <Content Include="Views\Ref_Customer_Status\Delete.cshtml" />
+    <Content Include="Views\Ref_Customer_Status\Details.cshtml" />
+    <Content Include="Views\Ref_Customer_Status\Edit.cshtml" />
+    <Content Include="Views\Ref_Customer_Status\Index.cshtml" />
+    <Content Include="Views\Lessons\Create.cshtml" />
+    <Content Include="Views\Lessons\Delete.cshtml" />
+    <Content Include="Views\Lessons\Details.cshtml" />
+    <Content Include="Views\Lessons\Edit.cshtml" />
+    <Content Include="Views\Lessons\Index.cshtml" />
+    <Content Include="Views\Vehicles\Create.cshtml" />
+    <Content Include="Views\Vehicles\Delete.cshtml" />
+    <Content Include="Views\Vehicles\Details.cshtml" />
+    <Content Include="Views\Vehicles\Edit.cshtml" />
+    <Content Include="Views\Vehicles\Index.cshtml" />
+    <Content Include="Views\Ref_Lesson_Status\Create.cshtml" />
+    <Content Include="Views\Ref_Lesson_Status\Delete.cshtml" />
+    <Content Include="Views\Ref_Lesson_Status\Details.cshtml" />
+    <Content Include="Views\Ref_Lesson_Status\Edit.cshtml" />
+    <Content Include="Views\Ref_Lesson_Status\Index.cshtml" />
+    <Content Include="Views\Customer_Payment\Create.cshtml" />
+    <Content Include="Views\Customer_Payment\Delete.cshtml" />
+    <Content Include="Views\Customer_Payment\Details.cshtml" />
+    <Content Include="Views\Customer_Payment\Edit.cshtml" />
+    <Content Include="Views\Customer_Payment\Index.cshtml" />
+    <Content Include="Views\Ref_Payment_Methods\Create.cshtml" />
+    <Content Include="Views\Ref_Payment_Methods\Delete.cshtml" />
+    <Content Include="Views\Ref_Payment_Methods\Details.cshtml" />
+    <Content Include="Views\Ref_Payment_Methods\Edit.cshtml" />
+    <Content Include="Views\Ref_Payment_Methods\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

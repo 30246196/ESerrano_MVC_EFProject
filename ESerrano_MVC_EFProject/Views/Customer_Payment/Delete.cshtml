@@ -1,0 +1,56 @@
+﻿@model ESerrano_MVC_EFProject.Models.Customer_Payment
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Customer_Payment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.First_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.First_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ref_Payment_Methods.Payment_Method_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ref_Payment_Methods.Payment_Method_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ammount_Payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ammount_Payment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Other_Payment_Details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Other_Payment_Details)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,26 @@
+﻿@model ESerrano_MVC_EFProject.Models.Ref_Lesson_Status
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ref_Lesson_Status</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Lesson_Status_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lesson_Status_Description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Lesson_Status_Code }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
