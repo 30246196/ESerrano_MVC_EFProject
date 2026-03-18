@@ -178,5 +178,6 @@ namespace ESerrano_MVC_EFProject.Models
 
         //public List<Customer_Payment> Customer_Payments { get; set; } //One ref_payment_methods has many customer payments
 
+
     }
 }
