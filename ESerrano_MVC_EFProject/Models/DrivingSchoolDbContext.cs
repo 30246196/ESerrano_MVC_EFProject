@@ -5,7 +5,7 @@ using System.Data.Entity; // MUST INCLUDE FIRST – needed for DbContext, DbSet
 using System.Linq;
 using System.Web;
 
-namespace Task3_Driving_School.Models
+namespace ESerrano_MVC_EFProject.Models
 {
     // STEP 5: Create  DbContext class – this is the main class that manages your database
 
