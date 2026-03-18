@@ -24,17 +24,17 @@ namespace ESerrano_MVC_EFProject.Models
         public string Other_Customer_Details { get; set; }
 
         // Navigational properties
-        //[ForeignKey("Address")]//A customer has one address
-        //public int AddressId { get; set; }
-        //public Address Address { get; set; }
+        [ForeignKey("Address")]//A customer has one address
+        public int AddressId { get; set; }
+        public Address Address { get; set; }
 
-        //[ForeignKey("Ref_Customer_Status")]//A customer has one ref_customer_status
-        //public int Customer_Status_Code { get; set; }
-        //public Ref_Customer_Status Ref_Customer_Status { get; set; }
+        [ForeignKey("Ref_Customer_Status")]//A customer has one ref_customer_status
+        public int Customer_Status_Code { get; set; }
+        public Ref_Customer_Status Ref_Customer_Status { get; set; }
 
-        //public List<Customer_Payment> Customer_Payments { get; set; } //One customer has many customer payments
+        public List<Customer_Payment> Customer_Payments { get; set; } //One customer has many customer payments
 
-        //public List<Lesson> Lessons { get; set; } //One customer has many lessons
+        public List<Lesson> Lessons { get; set; } //One customer has many lessons
     }
 
     public class Address
@@ -51,8 +51,8 @@ namespace ESerrano_MVC_EFProject.Models
 
         //---------------Navigational Properties---------------
 
-        //public List<Customer> Customers { get; set; } //One address has many customers
-        //public List<Staff> Staffs { get; set; } //One address has many staff members
+        public List<Customer> Customers { get; set; } //One address has many customers
+        public List<Staff> Staffs { get; set; } //One address has many staff members
 
     }
 
@@ -71,11 +71,11 @@ namespace ESerrano_MVC_EFProject.Models
 
         //----------------Navigational Properties ------------------
 
-        //[ForeignKey("Address")]//Staff have one address
-        //public int? AddressId { get; set; }//make the property nullable -IMPORTANT
-        //public Address Address { get; set; }
+        [ForeignKey("Address")]//Staff have one address
+        public int? AddressId { get; set; }//make the property nullable -IMPORTANT
+        public Address Address { get; set; }
 
-        //public List<Lesson> Lessons { get; set; } //One staff member has many lessons
+        public List<Lesson> Lessons { get; set; } //One staff member has many lessons
 
     }
 
@@ -89,7 +89,7 @@ namespace ESerrano_MVC_EFProject.Models
 
         //---------Navigational Properties-------------
 
-        //public List<Customer> Customers { get; set; } //one Ref_Customer_Status has many customers
+        public List<Customer> Customers { get; set; } //one Ref_Customer_Status has many customers
 
     }
 
@@ -105,21 +105,21 @@ namespace ESerrano_MVC_EFProject.Models
 
         //-----------Navigational Properties--------- 
 
-        //[ForeignKey("Staff")]//A lesson has one staff member
-        //public int StaffId { get; set; }
-        //public Staff Staff { get; set; }
+        [ForeignKey("Staff")]//A lesson has one staff member
+        public int StaffId { get; set; }
+        public Staff Staff { get; set; }
 
-        //[ForeignKey("Customer")] //A lesson has one customer
-        //public int CustomerId { get; set; }
-        //public Customer Customer { get; set; }
+        [ForeignKey("Customer")] //A lesson has one customer
+        public int CustomerId { get; set; }
+        public Customer Customer { get; set; }
 
-        //[ForeignKey("Vehicle")] //A lesson has one vehicle
-        //public int VehicleId { get; set; }
-        //public Vehicle Vehicle { get; set; }
+        [ForeignKey("Vehicle")] //A lesson has one vehicle
+        public int VehicleId { get; set; }
+        public Vehicle Vehicle { get; set; }
 
-        //[ForeignKey("Ref_Lesson_Status")] //A lesson has one ref_lesson_status
-        //public int Lesson_Status_code { get; set; }
-        //public Ref_Lesson_Status Ref_Lesson_Status { get; set; }
+        [ForeignKey("Ref_Lesson_Status")] //A lesson has one ref_lesson_status
+        public int Lesson_Status_code { get; set; }
+        public Ref_Lesson_Status Ref_Lesson_Status { get; set; }
     }
 
     public class Vehicle
@@ -131,7 +131,7 @@ namespace ESerrano_MVC_EFProject.Models
 
         //--------------Navigational Properties------------------- 
 
-        //public List<Lesson> Lessons { get; set; } //one vehicle has many lessons
+        public List<Lesson> Lessons { get; set; } //one vehicle has many lessons
     }
 
     public class Ref_Lesson_Status
@@ -143,7 +143,7 @@ namespace ESerrano_MVC_EFProject.Models
 
         //-----------Navigational Properties ---------
 
-        /*public List<Lesson> Lessons { get; set; } //One ref_lesson_status has many lessons*/
+        public List<Lesson> Lessons { get; set; } //One ref_lesson_status has many lessons
     }
 
     public class Customer_Payment
@@ -162,9 +162,9 @@ namespace ESerrano_MVC_EFProject.Models
 
         //------------Navigational Properties -------------
 
-        //[ForeignKey("Ref_Payment_Methods")] //A customer-payment has one ref_payment_method
-        //public int Payment_Method_Code { get; set; }
-        //public Ref_Payment_Methods Ref_Payment_Methods { get; set; }
+        [ForeignKey("Ref_Payment_Methods")] //A customer-payment has one ref_payment_method
+        public int Payment_Method_Code { get; set; }
+        public Ref_Payment_Methods Ref_Payment_Methods { get; set; }
     }
 
     public class Ref_Payment_Methods
@@ -176,7 +176,7 @@ namespace ESerrano_MVC_EFProject.Models
 
         //----------Navigational Properties------------
 
-        //public List<Customer_Payment> Customer_Payments { get; set; } //One ref_payment_methods has many customer payments
+        public List<Customer_Payment> Customer_Payments { get; set; } //One ref_payment_methods has many customer payments
 
 
     }
